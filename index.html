@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse custom_nav">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Facebook Friend</a>
+		    </div>
+		  </div>
+		</nav>
+		<div class="container">
+			<div class="row login_section">
+			    <div class="col-md-12">
+			      <h4 class="login_txt">Log in to Facebook</h4>
+			      <button type="button" id="login" class="btn btn-default login_btn" onClick="loginUser();">Login</button>
+			    </div>
+			</div>
+			<div class="row logout_section" style="display:none;">
+				<div class="col-md-4">
+			      	<h4 class="login_txt">Welcome to Facebook</h4>
+					 <button type="button" id="logout" class="btn btn-default logout_btn" onClick="FB.logout();">Logout</button>
+				      <div id="user-info"></div>
+				</div>
+				<div class="col-md-8">
+					<h4 class="login_txt">Click to get the friend list</h4>
+					<a href="#" onclick="getUserFriends();" class="friend_btn">Get friends</a><br>
+					<ul id="user-friends">
+						<li class="user-friends"></li>
+					</ul>
+				</div>
+			</div>
+			<div id="fb-root"></div>
+		</div>
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ 		<script src="app.js"></script>
+	</body>
+</html>
